@@ -3,212 +3,101 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-03-03T13:43:17.118Z",
-        "line": 4,
-        "name": "Book Flight",
+        "start_timestamp": "2021-03-03T15:16:28.041Z",
+        "line": 3,
+        "name": "Should able to book the train and Pay",
         "description": "",
-        "id": "flight-booking---blibli-travel-website;book-flight",
+        "id": "train/cars-booking---blilbi-travel-website;should-able-to-book-the-train-and-pay",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 19538850000,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 5,
-            "name": "I launch blibli travel website",
-            "match": {
-              "location": "StepDefinitions.FlightBookingStep.i_launch_blibli_travel_website()"
-            },
+            "line": 4,
+            "name": "Launch blibli travel website",
+            "match": {},
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1182653000,
-              "status": "passed"
+              "duration": 200000,
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "Cars tab is selected",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 137000,
+              "status": "skipped"
             },
             "line": 6,
-            "name": "I enter origin as jakarta(CGK)",
-            "match": {
-              "location": "StepDefinitions.FlightBookingStep.i_enter_origin_as_jakarta_cgk()"
-            },
+            "name": "I enter the origin location",
+            "match": {},
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1136215000,
-              "status": "passed"
+              "duration": 183000,
+              "status": "skipped"
             },
             "line": 7,
-            "name": "I enter destination as Singapore(SIN)",
-            "match": {
-              "location": "StepDefinitions.FlightBookingStep.i_enter_destination_as_singapore_sin()"
-            },
+            "name": "i enter the destination location",
+            "match": {},
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1154497000,
-              "status": "passed"
+              "duration": 240000,
+              "status": "skipped"
             },
             "line": 8,
-            "name": "I enter date of travel",
-            "match": {
-              "location": "StepDefinitions.FlightBookingStep.i_enter_date_of_travel()"
-            },
+            "name": "I enter the date",
+            "match": {},
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1060643000,
-              "status": "passed"
+              "duration": 239000,
+              "status": "skipped"
             },
             "line": 9,
-            "name": "click on one-way radio_button",
-            "match": {
-              "location": "StepDefinitions.FlightBookingStep.click_on_one_way_radio_button()"
-            },
+            "name": "I select the one-way radio button",
+            "match": {},
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1380300000,
-              "status": "passed"
+              "duration": 219000,
+              "status": "skipped"
             },
             "line": 10,
-            "name": "click to choose passengers",
-            "match": {
-              "location": "StepDefinitions.FlightBookingStep.click_to_choose_passengers()"
-            },
+            "name": "choose no of tickets",
+            "match": {},
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1638170000,
-              "status": "passed"
+              "duration": 1262000,
+              "status": "skipped"
             },
             "line": 11,
-            "name": "choose flight class",
-            "match": {
-              "location": "StepDefinitions.FlightBookingStep.choose_flight_class()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 287913000,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "Hit find tickets",
-            "match": {
-              "location": "StepDefinitions.FlightBookingStep.hit_find_tickets()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 711000,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "Book Garuda Indonesia Flight on 15:05",
-            "match": {
-              "arguments": [
-                {
-                  "val": "15",
-                  "offset": 32
-                },
-                {
-                  "val": "05",
-                  "offset": 35
-                }
-              ],
-              "location": "StepDefinitions.FlightBookingStep.book_garuda_indonesia_flight_on(java.lang.Integer,java.lang.Integer)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 123000,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "Fill form details and click order",
-            "match": {
-              "location": "StepDefinitions.FlightBookingStep.fill_form_details_and_click_order()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 116000,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "do Payment at the booth",
-            "match": {
-              "location": "StepDefinitions.FlightBookingStep.do_payment_at_the_booth()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 108000,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "Pay Now",
-            "match": {
-              "location": "StepDefinitions.FlightBookingStep.pay_now()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 106000,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "verify recommendation stay is there",
-            "match": {
-              "location": "StepDefinitions.FlightBookingStep.verify_recommendation_stay_is_there()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 104000,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "hit order now and check the hotel names before and after",
-            "match": {
-              "location": "StepDefinitions.FlightBookingStep.hit_order_now_and_check_the_hotel_names_before_and_after()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 103000,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "close the browser",
-            "match": {
-              "location": "StepDefinitions.FlightBookingStep.close_the_browser()"
-            },
+            "name": "click find tickets",
+            "match": {},
             "keyword": "And "
           }
         ]
       }
     ],
-    "name": "Flight Booking - Blibli Travel Website",
+    "name": "Train/Cars Booking - Blilbi travel website",
     "description": "",
-    "id": "flight-booking---blibli-travel-website",
+    "id": "train/cars-booking---blilbi-travel-website",
     "keyword": "Feature",
-    "uri": "file:Features/Flight_Booking.feature",
+    "uri": "file:Features/Train_Booking.feature",
     "tags": []
   }
 ]

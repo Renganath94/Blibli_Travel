@@ -8,11 +8,15 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.ISelect;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 import java.util.concurrent.TimeUnit;
+
+import static org.junit.Assert.assertTrue;
 
 public class FlightBookingStep {
 
@@ -21,33 +25,32 @@ public class FlightBookingStep {
     @Given("I launch blibli travel website")
     public void i_launch_blibli_travel_website() throws InterruptedException
     {
-
           System.setProperty("webdriver.chrome.driver","src/test/java/resources/driver/chromedriver");
           driver = new ChromeDriver();
           driver.manage().window().maximize();
           driver.get("https://www.blibli.com/travel/");
-          Thread.sleep(10000);
-
-
-      }
+          Thread.sleep(1000);
+    }
 
 
     @Then("I enter origin as jakarta\\(CGK)")
-    public void i_enter_origin_as_jakarta_cgk() throws InterruptedException {
+    public void i_enter_origin_as_jakarta_cgk()
+    {
         WebElement origin = driver.findElement(By.xpath("//input[@placeholder=\"Pilih kota asal\"]"));
         origin.clear();
         origin.sendKeys("Jakarta (CGK)");
         origin.sendKeys(Keys.RETURN);
-        Thread.sleep(1000);
+
 
     }
     @Then("I enter destination as Singapore\\(SIN)")
-    public void i_enter_destination_as_singapore_sin() throws InterruptedException {
+    public void i_enter_destination_as_singapore_sin()
+    {
         WebElement destination = driver.findElement(By.xpath("//*[@placeholder=\"Pilih kota tujuan\"]"));
         destination.clear();
         destination.sendKeys("Singapore (SIN)");
         destination.sendKeys(Keys.RETURN);
-        Thread.sleep(1000);
+
     }
 
     @Then("I enter date of travel")
@@ -87,10 +90,13 @@ public class FlightBookingStep {
 
     }
     @Then("Hit find tickets")
-    public void hit_find_tickets() throws InterruptedException
-    {
+    public void hit_find_tickets() throws InterruptedException {
         WebElement findbutton = driver.findElement(By.xpath("//*[@class=\"button button--orange button--big button--full form__button\"]"));
+        assertTrue("Button not working",findbutton.isEnabled());
         findbutton.click();
+//        Thread.sleep(30000);
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"travel-blibli-app\"]/div/main/div[1]/section/div/div[1]/div/a")));
     }
     @Then("Book Garuda Indonesia Flight on {int}:{int}")
     public void book_garuda_indonesia_flight_on(Integer int1, Integer int2)

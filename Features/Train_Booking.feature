@@ -1,4 +1,4 @@
-Feature - Train/Cars Booking - Blilbi travel website
+Feature: Train/Cars Booking - Blilbi travel website
 
   Scenario: Should able to book the train and Pay
     Given Launch blibli travel website
